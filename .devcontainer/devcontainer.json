@@ -10,21 +10,16 @@
         "PKief.material-icon-theme",
         "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
-        "bradzacher.vscode-copy-filename",
-        "esbenp.prettier-vscode",
-        "gurumukhi.selected-lines-count",
-        "marvhen.reflow-markdown",
         "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.flake8",
+        "ms-python.pylint",
+        "ms-python.python",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
       ],
       "settings": {
-        "[cpp]": {
-          "C_Cpp.autocompleteAddParentheses": true,
-          "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-          "C_Cpp.intelliSenseEngine": "default",
-          "editor.defaultFormatter": "ms-vscode.cpptools"
-        },
         "[dockercompose]": {
           "editor.autoIndent": "advanced",
           "editor.defaultFormatter": "ms-azuretools.vscode-docker",
@@ -47,14 +42,15 @@
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
         },
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
         "[shellscript]": {
-          "editor.defaultFormatter": "foxundermoon.shell-format",
           "editor.tabSize": 4,
           "files.eol": "\n"
         },
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
         "editor.snippetSuggestions": "top",
@@ -90,7 +86,7 @@
   "features": {
     "ghcr.io/gvatsal60/dev-container-features/sonarlint": {}
   },
-  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "image": "mcr.microsoft.com/devcontainers/python:latest",
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
